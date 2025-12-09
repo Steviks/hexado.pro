@@ -95,51 +95,77 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 opacity-40">
-          <div className="absolute top-20 left-10 h-96 w-96 rounded-full bg-primary blur-3xl" />
-          <div className="absolute bottom-20 right-10 h-96 w-96 rounded-full bg-secondary blur-3xl" />
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-1/4 left-1/4 h-96 w-96 bg-primary/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 h-96 w-96 bg-secondary/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            <Badge className="bg-primary/20 text-primary border-primary/30 mb-6 text-base px-6 py-2 font-semibold">
-              <Server className="h-4 w-4 mr-2" />
-              Herní Hosting
-            </Badge>
-          </div>
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <div className="space-y-8 text-center lg:text-left">
+              <div>
+                <Badge className="bg-primary/20 text-primary border-primary/30 mb-6 text-base px-6 py-2">
+                  🚀 Herní Hosting Nové Generace
+                </Badge>
+                <h1 className="text-5xl md:text-7xl font-black mb-6 text-balance leading-tight">
+                  Hostujte své <span className="text-primary">herní servery</span> jako profesionál
+                </h1>
+                <p className="text-xl md:text-2xl text-muted-foreground text-pretty leading-relaxed">
+                  Bleskurychle, bezpečně a bez starostí. Tisíce hráčů věří Hexado.pro.
+                </p>
+              </div>
 
-          <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight">
-              Profesionální Hosting pro <span className="text-secondary">Vaše Servery</span>
-            </h1>
-          </div>
+              <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
+                <Button
+                  size="lg"
+                  className="bg-primary text-primary-foreground text-lg px-8 h-14 rounded-xl shadow-lg font-bold transition-all duration-200 cursor-pointer hover:bg-primary/80 hover:shadow-lg hover:shadow-primary/40 hover:brightness-110"
+                  onClick={() => (window.location.href = "#")}
+                >
+                  <Rocket className="mr-2 h-5 w-5" />
+                  Vytvořit Server
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 h-14 rounded-xl border-2 font-bold bg-background/50 transition-all duration-200 cursor-pointer hover:bg-background/80 hover:border-primary hover:text-primary hover:shadow-lg hover:brightness-110"
+                  onClick={() => handleSmoothScroll("services-section")}
+                >
+                  Zjistit Více
+                </Button>
+              </div>
 
-          <div className="animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 text-pretty leading-relaxed">
-              Výkonný herní hosting s 24/7 podporou, DDoS ochranou a garantovanou dostupností 99.9%
-            </p>
-          </div>
+              {/* Stats */}
+              <div className="flex items-center gap-4 pt-4 justify-center lg:justify-start">
+                <div className="flex -space-x-2">
+                  <div className="w-10 h-10 rounded-full bg-primary border-2 border-background" />
+                  <div className="w-10 h-10 rounded-full bg-secondary border-2 border-background" />
+                  <div className="w-10 h-10 rounded-full bg-orange-500 border-2 border-background" />
+                  <div className="w-10 h-10 rounded-full bg-cyan-500 border-2 border-background" />
+                </div>
+                <div>
+                  <div className="text-lg font-bold text-foreground">50 000+ hráčů</div>
+                  <div className="text-sm text-muted-foreground">věří Hexado.pro</div>
+                </div>
+              </div>
+            </div>
 
-          <div
-            className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground font-bold px-8 transition-all duration-300 cursor-pointer hover:bg-primary/80 hover:shadow-lg hover:shadow-primary/40"
-              onClick={() => (window.location.href = "#")}
-            >
-              Vytvořit Server
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-secondary text-secondary font-bold px-8 transition-all duration-300 cursor-pointer hover:bg-secondary/10 bg-transparent"
-              onClick={() => handleSmoothScroll("services-section")}
-            >
-              Zjistit Více
-            </Button>
+            {/* Right Image */}
+            <div className="relative flex-1">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/minecraft-gaming-server-colorful-kids-playing.jpg"
+                  alt="Hosting herního serveru"
+                  className="w-full h-auto"
+                />
+                <div className="absolute top-6 right-6 bg-secondary/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+                  <Trophy className="h-8 w-8 text-secondary-foreground" />
+                </div>
+                <div className="absolute bottom-6 left-6 bg-primary/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+                  <Zap className="h-8 w-8 text-primary-foreground" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
