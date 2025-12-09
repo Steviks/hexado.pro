@@ -109,7 +109,7 @@ export default function Home() {
                   🚀 Herní Hosting Nové Generace
                 </Badge>
                 <h1 className="text-5xl md:text-7xl font-black mb-6 text-balance leading-tight">
-                  Hostujte své <span className="text-primary">herní servery</span> jako profesionál
+                  Spusťte svůj <span className="text-primary">herní server</span> během sekundy
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground text-pretty leading-relaxed">
                   Bleskurychle, bezpečně a bez starostí. Tisíce hráčů věří Hexado.pro.
@@ -144,7 +144,7 @@ export default function Home() {
                   <div className="w-10 h-10 rounded-full bg-cyan-500 border-2 border-background" />
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-foreground">50 000+ hráčů</div>
+                  <div className="text-lg font-bold text-foreground">1 000+ hráčů</div>
                   <div className="text-sm text-muted-foreground">věří Hexado.pro</div>
                 </div>
               </div>
@@ -661,7 +661,6 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img src="/images/1.png" alt="Hexado" className="h-8 w-auto" />
-                <span className="font-bold">Hexado.pro</span>
               </div>
               <p className="text-muted-foreground text-sm">Profesionální hosting herních serverů pro všechny.</p>
             </div>
