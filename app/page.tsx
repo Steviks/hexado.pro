@@ -576,8 +576,8 @@ export default function Home() {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-secondary text-secondary-foreground px-8 py-6 rounded-2xl shadow-2xl border-2 border-background">
-              <div className="text-5xl font-bold">5000+</div>
-              <div className="text-sm opacity-90">Spokojení Hráči</div>
+              <div className="text-5xl font-bold">100+</div>
+              <div className="text-sm opacity-90">Spokojených Klientů</div>
             </div>
           </div>
         </div>
@@ -601,9 +601,9 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">🎮</span>
                 <div>
-                  <h3 className="text-lg font-bold text-card-foreground mb-1">Jaké hry podporujete?</h3>
+                  <h3 className="text-lg font-bold text-card-foreground mb-1">Na jakém processoru běží Vaše servery?</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Podporujeme Minecraft, FiveM, Discord Boti a více. Máme řešení pro téměř každou populární hru.
+                    Všechny naše servery běží na processoru R7 nebo R9 - záleží na lokalitě, nebo na balíčku.
                   </p>
                 </div>
               </div>
@@ -617,7 +617,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-lg font-bold text-card-foreground mb-1">Jaké máte způsoby platby?</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Přijímáme všechny hlavní kreditní karty, PayPal a bankovní převody. Vyberte si, co vám vyhovuje.
+                    Přijímáme všechny kreditní karty, PayPal a bankovní převody. Vyberte si, co vám vyhovuje.
                   </p>
                 </div>
               </div>
@@ -631,7 +631,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-lg font-bold text-card-foreground mb-1">Dostanete podporu?</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Ano! Máme 24/7 podporu přes email, chat a Discord. Jsme tu pro vás kdykoliv je potřebujete.
+                    Ano! Máme 24/7 podporu přes ticket v administraci a email. Jsme tu pro vás kdykoliv je potřebujete.
                   </p>
                 </div>
               </div>
@@ -643,9 +643,9 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">🚀</span>
                 <div>
-                  <h3 className="text-lg font-bold text-card-foreground mb-1">Jak rychle je nastavení?</h3>
+                  <h3 className="text-lg font-bold text-card-foreground mb-1">Jak rychlé je nastavení?</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Váš server je připraven za 60 sekund! Stačí se registrovat a váš herní server je živý.
+                    Váš server je připraven za 60 sekund! Stačí se registrovat, zakoupit službu a váš herní server je živý.
                   </p>
                 </div>
               </div>
@@ -662,24 +662,19 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-4">
                 <img src="/images/1.png" alt="Hexado" className="h-8 w-auto" />
               </div>
-              <p className="text-muted-foreground text-sm">Profesionální hosting herních serverů pro všechny.</p>
+              <p className="text-muted-foreground text-sm">Rychlé, spolehlivé a profesionální řešení pro vaše herní servery.</p>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Služby</h4>
+              <h4 className="font-bold mb-4">Administrace</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="#minecraft" className="hover:text-primary transition duration-200 cursor-pointer">
-                    Minecraft
+                    Dashboard
                   </a>
                 </li>
                 <li>
                   <a href="#fivem" className="hover:text-primary transition duration-200 cursor-pointer">
-                    FiveM
-                  </a>
-                </li>
-                <li>
-                  <a href="#discord" className="hover:text-primary transition duration-200 cursor-pointer">
-                    Discord Boti
+                    Server Administrace
                   </a>
                 </li>
               </ul>
@@ -688,8 +683,8 @@ export default function Home() {
               <h4 className="font-bold mb-4">Společnost</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#about" className="hover:text-primary transition duration-200 cursor-pointer">
-                    O nás
+                  <a href="https://status.hexado.pro" className="hover:text-primary transition duration-200 cursor-pointer">
+                    Status
                   </a>
                 </li>
                 <li>
@@ -700,16 +695,16 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Právní</h4>
+              <h4 className="font-bold mb-4">Leegal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#privacy" className="hover:text-primary transition duration-200 cursor-pointer">
-                    Ochrana Soukromí
+                  <a href="https://cdn.hexado.pro/legal/vop.pdf" className="hover:text-primary transition duration-200 cursor-pointer">
+                    Všeobecné obchodní podmínky
                   </a>
                 </li>
                 <li>
-                  <a href="#terms" className="hover:text-primary transition duration-200 cursor-pointer">
-                    Podmínky
+                  <a href="http://cdn.hexado.pro/legal/gdpr.pdf" className="hover:text-primary transition duration-200 cursor-pointer">
+                    Zásady ochrany osobních údajů
                   </a>
                 </li>
               </ul>
@@ -719,22 +714,16 @@ export default function Home() {
             <p className="text-muted-foreground text-sm">© 2025 Hexado.pro. Všechna práva vyhrazena.</p>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="text-muted-foreground hover:text-primary transition duration-200 cursor-pointer text-sm"
-              >
-                Twitter
-              </a>
-              <a
-                href="#"
+                href="https://discord.com/invite/E43Qf2Dgu9"
                 className="text-muted-foreground hover:text-primary transition duration-200 cursor-pointer text-sm"
               >
                 Discord
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/hexado.pro"
                 className="text-muted-foreground hover:text-primary transition duration-200 cursor-pointer text-sm"
               >
-                GitHub
+                Instagram
               </a>
             </div>
           </div>
