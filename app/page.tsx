@@ -172,174 +172,175 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services-section" className="container mx-auto px-4 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 opacity-10">
-          <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-primary blur-3xl" />
-          <div className="absolute bottom-20 right-10 h-96 w-96 rounded-full bg-secondary blur-3xl" />
+      <section
+        id="services-section"
+        className="relative py-24 px-4 overflow-hidden"
+      >
+        {/* background glow */}
+        <div className="absolute inset-0 -z-10 opacity-40">
+          <div className="absolute -top-20 -left-10 h-72 w-72 rounded-full bg-primary/40 blur-3xl" />
+          <div className="absolute -bottom-24 right-0 h-96 w-96 rounded-full bg-secondary/40 blur-3xl" />
         </div>
 
-        <div className="text-center mb-20 animate-fade-in">
-          <Badge className="bg-primary/20 text-primary border-primary/30 mb-6 text-base px-6 py-2 font-semibold">
-            <Server className="h-4 w-4 mr-2" />
-            Naše Služby
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-            Hosting pro <span className="text-primary">každou hru</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Výběr z nejpopulárnějších herních platforem s vysokovýkonným hostingem a 24/7 podporou.
-          </p>
-        </div>
+        <div className="container mx-auto max-w-6xl relative">
+          {/* Headline */}
+          <div className="text-center mb-16 animate-fade-in-up">
+            <Badge className="inline-flex items-center gap-2 bg-primary/10 text-primary border-primary/30 px-5 py-2 rounded-full">
+              <Server className="h-4 w-4" />
+              <span className="font-semibold tracking-wide">Naše služby</span>
+            </Badge>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* FiveM Service Card */}
-          <div className="group relative animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <Card className="relative bg-card/50 backdrop-blur-sm border border-border/50 overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20 h-full flex flex-col">
-              <div className="p-8 space-y-6 flex flex-col h-full">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-1">FiveM</h3>
-                    <p className="text-sm text-muted-foreground">GTA V Roleplay</p>
-                  </div>
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Car className="h-6 w-6 text-primary" />
-                  </div>
-                </div>
+            <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-balance">
+              Hosting pro <span className="text-primary">každou hru</span>
+            </h2>
 
-                <div className="space-y-3 flex-grow">
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-sm text-foreground">8GB RAM, 4 CPU cores</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-sm text-foreground">100GB NVMe SSD</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-sm text-foreground">Až 128 hráčů</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-sm text-foreground">DDoS ochrana</span>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-border/50 mt-auto">
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-3xl font-bold text-primary">$9.99</span>
-                    <span className="text-muted-foreground text-sm">/měsíc</span>
-                  </div>
-                  <Button className="w-full bg-primary text-primary-foreground transition-all duration-200 hover:bg-primary/80 hover:shadow-lg hover:shadow-primary/40">
-                    Objednat
-                  </Button>
-                </div>
-              </div>
-            </Card>
+            <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Nejpopulárnější herní platformy na jednom místě – stabilní servery,
+              rychlé nasazení a podpora, která odpovídá během pár minut.
+            </p>
           </div>
 
-          {/* Minecraft Service Card - Featured */}
-          <div className="group relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 via-secondary/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <Card className="relative bg-gradient-to-br from-card to-card/50 backdrop-blur-sm border-2 border-secondary/50 overflow-hidden transition-all duration-300 hover:border-secondary hover:shadow-2xl hover:shadow-secondary/30 h-full flex flex-col">
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-10">
-                <Badge className="bg-secondary text-secondary-foreground text-base px-6 py-2 shadow-lg font-bold">
-                  <Crown className="h-4 w-4 mr-2" />
+          {/* Cards grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* FiveM */}
+            <Card className="group relative rounded-3xl bg-card/90 border border-border/60 shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
+              <CardContent className="p-8 h-full flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-semibold">FiveM</h3>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">
+                      GTA V Roleplay servery
+                    </p>
+                  </div>
+                  <div className="h-10 w-10 rounded-2xl bg-primary/10 flex items-center justify-center">
+                    <Car className="h-5 w-5 text-primary" />
+                  </div>
+                </div>
+
+                <p className="text-sm text-muted-foreground mb-5">
+                  Ideální pro RP komunity, economy servery i akční frakční servery.
+                  Plná podpora custom skriptů a pluginů.
+                </p>
+
+                <ul className="space-y-3 text-sm text-muted-foreground flex-1">
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <span>Optimalizace pro stabilní FPS a nízký ping</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <span>Podpora whitelistu, queue a anti-cheatu</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <span>Rychlé zálohy a obnova serveru</span>
+                  </li>
+                </ul>
+
+                <div className="mt-8">
+                  <Button className="w-full bg-primary text-primary-foreground font-semibold rounded-2xl h-11 hover:bg-primary/90">
+                    Spustit FiveM server
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Minecraft – zvýrazněná karta */}
+            <Card className="group relative rounded-3xl bg-card/95 border-2 border-secondary shadow-[0_30px_80px_rgba(0,0,0,0.9)] scale-[1.02] md:scale-105 md:-translate-y-2 transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_36px_90px_rgba(0,0,0,1)]">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <Badge className="bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-semibold">
+                  <Crown className="h-3 w-3" />
                   Nejpopulárnější
                 </Badge>
               </div>
-              <div className="p-8 space-y-6 pt-12 flex flex-col h-full">
-                <div className="flex items-center justify-between">
+
+              <CardContent className="p-8 pt-10 h-full flex flex-col">
+                <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-1">Minecraft</h3>
-                    <p className="text-sm text-muted-foreground">Plugins & Mods</p>
+                    <h3 className="text-2xl font-semibold">Minecraft</h3>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">
+                      Survival, Skyblock &amp; modpacky
+                    </p>
                   </div>
-                  <div className="p-3 bg-secondary/20 rounded-lg group-hover:bg-secondary/30 transition-colors">
-                    <Trophy className="h-6 w-6 text-secondary" />
-                  </div>
-                </div>
-
-                <div className="space-y-3 flex-grow">
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-secondary flex-shrink-0" />
-                    <span className="text-sm text-foreground">4GB RAM, 2 CPU cores</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-secondary flex-shrink-0" />
-                    <span className="text-sm text-foreground">60GB NVMe SSD</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-secondary flex-shrink-0" />
-                    <span className="text-sm text-foreground">Až 30 hráčů</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-secondary flex-shrink-0" />
-                    <span className="text-sm text-foreground">1-click Installer</span>
+                  <div className="h-10 w-10 rounded-2xl bg-secondary/15 flex items-center justify-center">
+                    <Trophy className="h-5 w-5 text-secondary" />
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-border/50 mt-auto">
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-3xl font-bold text-secondary">$4.99</span>
-                    <span className="text-muted-foreground text-sm">/měsíc</span>
-                  </div>
-                  <Button className="w-full bg-secondary text-secondary-foreground transition-all duration-200 hover:bg-secondary/80 hover:shadow-lg hover:shadow-secondary/40">
-                    Objednat
+                <p className="text-sm text-muted-foreground mb-5">
+                  Od malého survival serveru s kamarády po velkou veřejnou
+                  síť. Podpora Paper, Purpur, Forge i dalších platforem.
+                </p>
+
+                <ul className="space-y-3 text-sm text-muted-foreground flex-1">
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                    <span>1-click instalace pluginů a modpacků</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                    <span>Automatické zálohy světa a konfigurací</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                    <span>Připravené presety pro různé typy serverů</span>
+                  </li>
+                </ul>
+
+                <div className="mt-8">
+                  <Button className="w-full bg-secondary text-secondary-foreground font-semibold rounded-2xl h-11 hover:bg-secondary/90">
+                    Spustit Minecraft server
                   </Button>
                 </div>
-              </div>
+              </CardContent>
             </Card>
-          </div>
 
-          {/* Discord Bots Service Card */}
-          <div className="group relative animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-purple-500/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <Card className="relative bg-card/50 backdrop-blur-sm border border-border/50 overflow-hidden transition-all duration-300 hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/20 h-full flex flex-col">
-              <div className="p-8 space-y-6 flex flex-col h-full">
-                <div className="flex items-center justify-between">
+            {/* Discord boti */}
+            <Card className="group relative rounded-3xl bg-card/90 border border-border/60 shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
+              <CardContent className="p-8 h-full flex flex-col">
+                <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-1">Discord Boti</h3>
-                    <p className="text-sm text-muted-foreground">Komunity Hosting</p>
+                    <h3 className="text-2xl font-semibold">Discord boti</h3>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">
+                      Hosting pro komunity
+                    </p>
                   </div>
-                  <div className="p-3 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20 transition-colors">
-                    <Trophy className="h-6 w-6 text-purple-500" />
-                  </div>
-                </div>
-
-                <div className="space-y-3 flex-grow">
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-purple-500 flex-shrink-0" />
-                    <span className="text-sm text-foreground">Neomezené boty</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-purple-500 flex-shrink-0" />
-                    <span className="text-sm text-foreground">99.9% Uptime</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-purple-500 flex-shrink-0" />
-                    <span className="text-sm text-foreground">Vlastní proxy</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-purple-500 flex-shrink-0" />
-                    <span className="text-sm text-foreground">24/7 Podpora</span>
+                  <div className="h-10 w-10 rounded-2xl bg-purple-500/15 flex items-center justify-center">
+                    <Trophy className="h-5 w-5 text-purple-400" />
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-border/50 mt-auto">
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-3xl font-bold text-purple-500">$2.99</span>
-                    <span className="text-muted-foreground text-sm">/měsíc</span>
-                  </div>
-                  <Button className="w-full bg-purple-500 text-white transition-all duration-200 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-500/40">
-                    Objednat
+                <p className="text-sm text-muted-foreground mb-5">
+                  Spolehlivý hosting pro moderaci, hudební i custom utility
+                  boty. Ideální pro herní servery i velké komunity.
+                </p>
+
+                <ul className="space-y-3 text-sm text-muted-foreground flex-1">
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-purple-500" />
+                    <span>Non-stop běh botů bez restartů</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-purple-500" />
+                    <span>Možnost hostingu více botů na jednom účtu</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-purple-500" />
+                    <span>Logy a monitoring pro ladění a debugging</span>
+                  </li>
+                </ul>
+
+                <div className="mt-8">
+                  <Button className="w-full bg-purple-500 text-white font-semibold rounded-2xl h-11 hover:bg-purple-600">
+                    Spustit Discord bota
                   </Button>
                 </div>
-              </div>
+              </CardContent>
             </Card>
           </div>
         </div>
       </section>
+
 
       {/* Pricing Section */}
       <section id="pricing" className="container mx-auto px-4 py-16">
