@@ -96,7 +96,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+  <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 animate-fade-in-up">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 h-96 w-96 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 h-96 w-96 bg-secondary/10 rounded-full blur-3xl" />
