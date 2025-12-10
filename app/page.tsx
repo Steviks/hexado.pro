@@ -48,6 +48,7 @@ export default function Home() {
               <div className="hidden md:flex items-center">
                 <Button
                   className="bg-secondary text-secondary-foreground font-bold shadow-lg shadow-secondary/30 transition-all duration-200 cursor-pointer hover:bg-secondary/90 hover:shadow-secondary/50 hover:brightness-110"
+                  target="_blank"
                   onClick={() => (window.location.href = "#")}
                 >
                   Administrace
@@ -668,12 +669,12 @@ export default function Home() {
               <h4 className="font-bold mb-4">Administrace</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#minecraft" className="hover:text-primary transition duration-200 cursor-pointer">
+                  <a href="#minecraft" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
                     Dashboard
                   </a>
                 </li>
                 <li>
-                  <a href="#fivem" className="hover:text-primary transition duration-200 cursor-pointer">
+                  <a href="#fivem" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
                     Server Administrace
                   </a>
                 </li>
@@ -683,27 +684,27 @@ export default function Home() {
               <h4 className="font-bold mb-4">Společnost</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="https://status.hexado.pro" className="hover:text-primary transition duration-200 cursor-pointer">
+                  <a href="https://status.hexado.pro" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
                     Status
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-primary transition duration-200 cursor-pointer">
+                  <a href="#contact" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
                     Kontakt
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Leegal</h4>
+              <h4 className="font-bold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="https://cdn.hexado.pro/legal/vop.pdf" className="hover:text-primary transition duration-200 cursor-pointer">
+                  <a href="https://cdn.hexado.pro/legal/vop.pdf" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
                     Všeobecné obchodní podmínky
                   </a>
                 </li>
                 <li>
-                  <a href="http://cdn.hexado.pro/legal/gdpr.pdf" className="hover:text-primary transition duration-200 cursor-pointer">
+                  <a href="http://cdn.hexado.pro/legal/gdpr.pdf" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
                     Zásady ochrany osobních údajů
                   </a>
                 </li>
@@ -716,12 +717,14 @@ export default function Home() {
               <a
                 href="https://discord.com/invite/E43Qf2Dgu9"
                 className="text-muted-foreground hover:text-primary transition duration-200 cursor-pointer text-sm"
+                target="_blank"
               >
                 Discord
               </a>
               <a
                 href="https://www.instagram.com/hexado.pro"
                 className="text-muted-foreground hover:text-primary transition duration-200 cursor-pointer text-sm"
+                target="_blank"
               >
                 Instagram
               </a>
