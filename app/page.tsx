@@ -369,130 +369,87 @@ export default function Home() {
 
         {/* The pricing table was not updated, so it remains the same */}
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-  {/* LEFT */}
-  <Card className="group relative rounded-3xl bg-card/90 border border-border/60 shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
-    <CardContent className="p-8 space-y-6 h-full flex flex-col">
-      <div>
-        <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Wood</Badge>
-        <div className="space-y-2">
-          <h3 className="text-3xl font-bold text-card-foreground">3GB RAM</h3>
-          <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold text-primary">90 Kč</span>
-            <span className="text-muted-foreground text-sm">/měsíc</span>
-          </div>
-        </div>
-      </div>
+          <Card className="bg-card border-border transition-all duration-200 group cursor-pointer hover:shadow-lg hover:shadow-primary/10">
+            <CardContent className="p-8 space-y-6">
+              <div>
+                <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Wood</Badge>
+                <div className="space-y-2">
+                  <h3 className="text-3xl font-bold text-card-foreground">3GB RAM</h3>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-bold text-primary">90 Kč</span>
+                    <span className="text-muted-foreground text-sm">/měsíc</span>
+                  </div>
+                </div>
+              </div>
 
-      <div className="space-y-3 py-4 border-t border-border flex-1">
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">3 vCPU</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">60GB NVMe SSD</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">Neomezené databáze a sloty</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">10x Záloha</span>
-        </div>
-      </div>
+              <div className="space-y-3 py-4 border-t border-border">
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  <span className="text-muted-foreground">3 vCPU</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  <span className="text-muted-foreground">60GB NVMe SSD</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  <span className="text-muted-foreground">Neomezené databáze a sloty</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  <span className="text-muted-foreground">10x Záloha</span>
+                </div>
+              </div>
 
-      <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 cursor-pointer rounded-2xl h-11 font-semibold mt-auto">
-        Začít
-      </Button>
-    </CardContent>
-  </Card>
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 cursor-pointer">
+                Začít
+              </Button>
+            </CardContent>
+          </Card>
 
-  {/* MIDDLE (featured) */}
-  <Card className="group relative rounded-3xl bg-card/95 border-2 border-secondary shadow-[0_30px_80px_rgba(0,0,0,0.9)] scale-[1.02] md:scale-105 md:-translate-y-2 transition-all duration-300 cursor-pointer hover:-translate-y-3 hover:shadow-[0_36px_90px_rgba(0,0,0,1)]">
-    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-      <Badge className="bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-semibold">
-        <Crown className="h-3 w-3" />
-        Nejpopulárnější
-      </Badge>
-    </div>
+          <Card className="bg-card border-2 border-secondary transition-all duration-200 group cursor-pointer relative hover:shadow-lg hover:shadow-secondary/20">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+              <Badge className="bg-secondary text-secondary-foreground">
+                <Crown className="h-3 w-3 mr-1" />
+                Nejpopulárnější
+              </Badge>
+            </div>
+            <CardContent className="p-8 space-y-6">
+              <div>
+                <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-4">Minecraft Iron</Badge>
+                <div className="space-y-2">
+                  <h3 className="text-3xl font-bold text-card-foreground">8GB RAM</h3>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-bold text-secondary">240 Kč</span>
+                    <span className="text-muted-foreground text-sm">/měsíc</span>
+                  </div>
+                </div>
+              </div>
 
-    <CardContent className="p-8 space-y-6 pt-10 h-full flex flex-col">
-      <div>
-        <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-4">Minecraft Iron</Badge>
-        <div className="space-y-2">
-          <h3 className="text-3xl font-bold text-card-foreground">8GB RAM</h3>
-          <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold text-secondary">240 Kč</span>
-            <span className="text-muted-foreground text-sm">/měsíc</span>
-          </div>
-        </div>
-      </div>
+              <div className="space-y-3 py-4 border-t border-border">
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                  <span className="text-muted-foreground">5 vCPU</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                  <span className="text-muted-foreground">120GB NVMe SSD</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                  <span className="text-muted-foreground">Neomezené databáze a sloty</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                  <span className="text-muted-foreground">15x Záloha</span>
+                </div>
+              </div>
 
-      <div className="space-y-3 py-4 border-t border-border flex-1">
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">5 vCPU</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">120GB NVMe SSD</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">Neomezené databáze a sloty</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">15x Záloha</span>
-        </div>
-      </div>
-
-      <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-all duration-200 cursor-pointer rounded-2xl h-11 font-semibold mt-auto">
-        Začít
-      </Button>
-    </CardContent>
-  </Card>
-
-  {/* RIGHT */}
-  <Card className="group relative rounded-3xl bg-card/90 border border-border/60 shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
-    <CardContent className="p-8 space-y-6 h-full flex flex-col">
-      <div>
-        <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Diamond</Badge>
-        <div className="space-y-2">
-          <h3 className="text-3xl font-bold text-card-foreground">16GB RAM</h3>
-          <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold text-primary">480 Kč</span>
-            <span className="text-muted-foreground text-sm">/měsíc</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="space-y-3 py-4 border-t border-border flex-1">
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">8 vCPU</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">120GB NVMe SSD</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">Neomezené databáze a sloty</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">20x Záloha</span>
-        </div>
-      </div>
-
-      <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 cursor-pointer rounded-2xl h-11 font-semibold mt-auto">
-        Začít
-      </Button>
-    </CardContent>
-  </Card>
-</div>
+              <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-all duration-200 cursor-pointer">
+                Začít
+              </Button>
+            </CardContent>
+          </Card>
 
           <Card className="bg-card border-border transition-all duration-200 group cursor-pointer hover:shadow-lg hover:shadow-primary/10">
             <CardContent className="p-8 space-y-6">
@@ -533,6 +490,7 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
 
       {/* Why Us Section */}
       <section id="why-us-section" className="container mx-auto px-4 py-20">
