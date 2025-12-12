@@ -569,14 +569,6 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-
-              <Card className="bg-transparent border border-border/50 hover:border-primary/50 transition-all duration-200 group cursor-pointer">
-                <CardContent className="p-5 flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 text-lg">
-                    <Star className="h-5 w-5 text-primary" />
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
 
