@@ -504,7 +504,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-lg font-bold text-card-foreground mb-1">99.9% Dostupnost</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Váš server běží nepřetržitě díky našim redundantním systémům a profesionální infrastruktuře.
+                      Váš server běží nepřetržitě díky našim systémům a profesionální infrastruktuře.
                     </p>
                   </div>
                 </CardContent>
@@ -518,7 +518,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-lg font-bold text-card-foreground mb-1">Maximální Bezpečnost</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Brány Fortinet, ochrana před DDoS a zašifrovaná připojení chrání vaše data před útoky.
+                      Nejlepší DDOS ochrana herních serverů na českém trhu.
                     </p>
                   </div>
                 </CardContent>
@@ -546,7 +546,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-lg font-bold text-card-foreground mb-1">Ultra-Rychlé Servery</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Konektivita 10Gb s procesory AMD Ryzen a NVMe SSD pro nejlepší výkon.
+                      Moderní servery s procesory AMD Ryzen 7 a NVMe SSD pro nejlepší výkon.
                     </p>
                   </div>
                 </CardContent>
@@ -556,12 +556,6 @@ export default function Home() {
                 <CardContent className="p-5 flex items-start gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 text-lg">
                     <Star className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-card-foreground mb-1">Bezplatná Subdoména</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      Obdržíte vlastní subdoménu zahnutou v každém serveru bez dalších poplatků.
-                    </p>
                   </div>
                 </CardContent>
               </Card>
