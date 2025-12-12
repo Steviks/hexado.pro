@@ -43,6 +43,12 @@ export default function Home() {
                 >
                   O nás
                 </a>
+                  <a
+                    href="../kontakt"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
+                  >
+                    Kontakt
+                  </a>
               </nav>
 
               <div className="hidden md:flex items-center">
@@ -79,6 +85,13 @@ export default function Home() {
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer block"
                 >
                   O nás
+                </a>
+                  <a
+                  href="../kontakt"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer block"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Kontakt
                 </a>
                 <Button
                   className="bg-secondary text-secondary-foreground font-bold shadow-lg shadow-secondary/30 transition-all duration-200 cursor-pointer hover:bg-secondary/90 hover:shadow-secondary/50 hover:brightness-110 w-full"
