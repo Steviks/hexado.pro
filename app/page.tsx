@@ -359,11 +359,11 @@ export default function Home() {
           <Card className="bg-card border-border transition-all duration-200 group cursor-pointer hover:shadow-lg hover:shadow-primary/10">
             <CardContent className="p-8 space-y-6">
               <div>
-                <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Budget</Badge>
+                <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Wood</Badge>
                 <div className="space-y-2">
-                  <h3 className="text-3xl font-bold text-card-foreground">4GB RAM</h3>
+                  <h3 className="text-3xl font-bold text-card-foreground">3GB RAM</h3>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-primary">$4.99</span>
+                    <span className="text-4xl font-bold text-primary">90 Kč</span>
                     <span className="text-muted-foreground text-sm">/měsíc</span>
                   </div>
                 </div>
@@ -372,7 +372,7 @@ export default function Home() {
               <div className="space-y-3 py-4 border-t border-border">
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  <span className="text-muted-foreground">2 CPU Jádra</span>
+                  <span className="text-muted-foreground">3 vCPU</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary" />
@@ -380,11 +380,11 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  <span className="text-muted-foreground">DDoS Ochrana</span>
+                  <span className="text-muted-foreground">Neomezené databáze a sloty</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  <span className="text-muted-foreground">Bezplatná Subdoména</span>
+                  <span className="text-muted-foreground">10x Záloha</span>
                 </div>
               </div>
 
@@ -403,11 +403,11 @@ export default function Home() {
             </div>
             <CardContent className="p-8 space-y-6">
               <div>
-                <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-4">Minecraft Medium</Badge>
+                <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-4">Minecraft Iron</Badge>
                 <div className="space-y-2">
-                  <h3 className="text-3xl font-bold text-card-foreground">6GB RAM</h3>
+                  <h3 className="text-3xl font-bold text-card-foreground">8GB RAM</h3>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-secondary">$7.99</span>
+                    <span className="text-4xl font-bold text-secondary">240 Kč</span>
                     <span className="text-muted-foreground text-sm">/měsíc</span>
                   </div>
                 </div>
@@ -416,19 +416,19 @@ export default function Home() {
               <div className="space-y-3 py-4 border-t border-border">
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-                  <span className="text-muted-foreground">3 CPU Jádra</span>
+                  <span className="text-muted-foreground">5 vCPU</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-                  <span className="text-muted-foreground">80GB NVMe SSD</span>
+                  <span className="text-muted-foreground">120GB NVMe SSD</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-                  <span className="text-muted-foreground">DDoS Ochrana</span>
+                  <span className="text-muted-foreground">Neomezené databáze a sloty</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-                  <span className="text-muted-foreground">Prioritní Podpora</span>
+                  <span className="text-muted-foreground">15x Záloha</span>
                 </div>
               </div>
 
@@ -441,11 +441,11 @@ export default function Home() {
           <Card className="bg-card border-border transition-all duration-200 group cursor-pointer hover:shadow-lg hover:shadow-primary/10">
             <CardContent className="p-8 space-y-6">
               <div>
-                <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Premium</Badge>
+                <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Diamond</Badge>
                 <div className="space-y-2">
-                  <h3 className="text-3xl font-bold text-card-foreground">8GB RAM</h3>
+                  <h3 className="text-3xl font-bold text-card-foreground">16GB RAM</h3>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-primary">$9.99</span>
+                    <span className="text-4xl font-bold text-primary">480 Kč</span>
                     <span className="text-muted-foreground text-sm">/měsíc</span>
                   </div>
                 </div>
@@ -454,7 +454,7 @@ export default function Home() {
               <div className="space-y-3 py-4 border-t border-border">
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  <span className="text-muted-foreground">4 CPU Jádra</span>
+                  <span className="text-muted-foreground">8 vCPU</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary" />
@@ -462,11 +462,11 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  <span className="text-muted-foreground">DDoS Ochrana</span>
+                  <span className="text-muted-foreground">Neomezené databáze a sloty</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  <span className="text-muted-foreground">24/7 Prioritní Podpora</span>
+                  <span className="text-muted-foreground">20x Záloha</span>
                 </div>
               </div>
 
