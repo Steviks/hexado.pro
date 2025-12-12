@@ -675,7 +675,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="#fivem" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
+                  <a href="https://panel.hexado.pro" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
                     Server Administrace
                   </a>
                 </li>
