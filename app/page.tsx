@@ -684,7 +684,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
+                  <a href="../kontakt" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
                     Kontakt
                   </a>
                 </li>
