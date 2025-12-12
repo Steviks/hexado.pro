@@ -30,7 +30,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* LEFT */}
           <div className="space-y-12">
             {/* Podpora */}
@@ -133,4 +133,5 @@ export default function ContactPage() {
     </div>
   )
 }
+
 
