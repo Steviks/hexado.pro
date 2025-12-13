@@ -59,6 +59,12 @@ export default function Home() {
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center gap-8 flex-1 justify-center">
                 <a
+                  onClick={() => handleSmoothScroll("pricing")}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
+                >
+                  Ceník
+                </a>
+                <a
                   onClick={() => handleSmoothScroll("services-section")}
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
                 >
@@ -101,6 +107,12 @@ export default function Home() {
             {/* Mobile Navigation */}
             {mobileMenuOpen && (
               <nav className="md:hidden mt-4 pt-4 border-t border-border/50 flex flex-col gap-4">
+                <a
+                  onClick={() => handleSmoothScroll("pricing")}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer block"
+                >
+                  Ceník
+                </a>
                 <a
                   onClick={() => handleSmoothScroll("services-section")}
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer block"
