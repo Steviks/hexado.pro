@@ -630,7 +630,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-lg font-bold text-card-foreground mb-1">Ultra-Rychlé Servery</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Moderní servery s procesory AMD Ryzen 7 a NVMe SSD pro nejlepší výkon.
+                      Moderní servery v Pražském datacentru s procesory AMD Ryzen 7 a NVMe SSD pro nejlepší výkon.
                     </p>
                   </div>
                 </CardContent>
@@ -675,7 +675,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-lg font-bold text-card-foreground mb-1">Na jakém processoru běží Vaše servery?</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Všechny naše servery běží na processoru R7 nebo R9 - záleží na lokalitě, nebo na balíčku.
+                    Všechny naše servery běží na processoru R7 nebo R9 - v Pražském datacentru, nebo na balíčku.
                   </p>
                 </div>
               </div>
