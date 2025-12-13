@@ -372,101 +372,180 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16 animate-fade-in">
-          <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-4">Ceník</Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">
-            Plány <span className="text-secondary">Hostingu</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Vyberte si plán, který nejlépe odpovídá vašim potřebám.
-          </p>
+<section id="pricing" className="container mx-auto px-4 py-16">
+  <div className="text-center mb-16 animate-fade-in">
+    <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-4">Ceník</Badge>
+    <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">
+      Plány <span className="text-secondary">Hostingu</span>
+    </h2>
+    <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+      Vyberte si plán, který nejlépe odpovídá vašim potřebám.
+    </p>
+  </div>
+
+  {/*
+    DATA – všechny plány z tabulky
+    (kdybyste chtěl změnit featured 3, upravte featuredPlans níže)
+  */}
+  {(() => {
+    const allPlans = [
+      { name: "Dirt", ramGb: 1, price: "30 Kč", vcpu: "1 vCPU", ssd: "15GB NVMe SSD", backups: "10x Záloha" },
+      { name: "Grass", ramGb: 2, price: "60 Kč", vcpu: "2 vCPU", ssd: "30GB NVMe SSD", backups: "10x Záloha" },
+      { name: "Wood", ramGb: 3, price: "90 Kč", vcpu: "3 vCPU", ssd: "45GB NVMe SSD", backups: "10x Záloha" },
+      { name: "Stone", ramGb: 4, price: "120 Kč", vcpu: "4 vCPU", ssd: "60GB NVMe SSD", backups: "15x Záloha" },
+      { name: "Coal", ramGb: 6, price: "180 Kč", vcpu: "4 vCPU", ssd: "90GB NVMe SSD", backups: "15x Záloha" },
+      { name: "Iron", ramGb: 8, price: "240 Kč", vcpu: "5 vCPU", ssd: "120GB NVMe SSD", backups: "15x Záloha", featured: true },
+      { name: "Gold", ramGb: 12, price: "360 Kč", vcpu: "6 vCPU", ssd: "180GB NVMe SSD", backups: "15x Záloha" },
+      { name: "Diamond", ramGb: 16, price: "480 Kč", vcpu: "8 vCPU", ssd: "240GB NVMe SSD", backups: "20x Záloha" },
+      { name: "Netherite", ramGb: 24, price: "720 Kč", vcpu: "10 vCPU", ssd: "360GB NVMe SSD", backups: "20x Záloha" },
+      { name: "Bedrock", ramGb: 32, price: "960 Kč", vcpu: "12 vCPU", ssd: "480GB NVMe SSD", backups: "20x Záloha" },
+    ]
+
+    // Ty 3 nahoře:
+    const featuredPlans = ["Wood", "Iron", "Diamond"]
+    const topPlans = allPlans.filter((p) => featuredPlans.includes(p.name))
+    const otherPlans = allPlans.filter((p) => !featuredPlans.includes(p.name))
+
+    const PlanCard = ({
+      plan,
+      variant,
+      popular,
+    }: {
+      plan: (typeof allPlans)[number]
+      variant: "primary" | "secondary"
+      popular?: boolean
+    }) => {
+      const isSecondary = variant === "secondary"
+      return (
+        <Card
+          className={[
+            "group relative rounded-3xl bg-card/90 border border-border/60 shadow-[0_24px_60px_rgba(0,0,0,0.6)]",
+            "transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]",
+            popular
+              ? "bg-card/95 border-2 border-secondary shadow-[0_30px_80px_rgba(0,0,0,0.9)] scale-[1.02] md:scale-105 md:-translate-y-2 hover:-translate-y-3 hover:shadow-[0_36px_90px_rgba(0,0,0,1)]"
+              : "",
+          ].join(" ")}
+        >
+          {popular && (
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+              <Badge className="bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-semibold">
+                <Crown className="h-3 w-3" />
+                Nejpopulárnější
+              </Badge>
+            </div>
+          )}
+
+          <CardContent className={["p-8 space-y-6 h-full flex flex-col", popular ? "pt-10" : ""].join(" ")}>
+            <div>
+              <Badge
+                className={[
+                  "mb-4",
+                  isSecondary ? "bg-secondary/20 text-secondary border-secondary/30" : "bg-primary/20 text-primary border-primary/30",
+                ].join(" ")}
+              >
+                Minecraft {plan.name}
+              </Badge>
+
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-card-foreground">{plan.ramGb}GB RAM</h3>
+                <div className="flex items-baseline gap-2">
+                  <span className={["text-4xl font-bold", isSecondary ? "text-secondary" : "text-primary"].join(" ")}>
+                    {plan.price}
+                  </span>
+                  <span className="text-muted-foreground text-sm">/měsíc</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-3 py-4 border-t border-border flex-1">
+              <div className="flex items-center gap-2 text-sm">
+                <div className={["h-1.5 w-1.5 rounded-full", isSecondary ? "bg-secondary" : "bg-primary"].join(" ")} />
+                <span className="text-muted-foreground">{plan.vcpu}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <div className={["h-1.5 w-1.5 rounded-full", isSecondary ? "bg-secondary" : "bg-primary"].join(" ")} />
+                <span className="text-muted-foreground">{plan.ssd}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <div className={["h-1.5 w-1.5 rounded-full", isSecondary ? "bg-secondary" : "bg-primary"].join(" ")} />
+                <span className="text-muted-foreground">Neomezené databáze a sloty</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <div className={["h-1.5 w-1.5 rounded-full", isSecondary ? "bg-secondary" : "bg-primary"].join(" ")} />
+                <span className="text-muted-foreground">{plan.backups}</span>
+              </div>
+            </div>
+
+            <Button
+              className={[
+                "w-full rounded-2xl h-11 font-semibold mt-auto transition-all duration-200 cursor-pointer",
+                isSecondary
+                  ? "bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                  : "bg-primary text-primary-foreground hover:bg-primary/90",
+              ].join(" ")}
+            >
+              Začít
+            </Button>
+          </CardContent>
+        </Card>
+      )
+    }
+
+    // Mapujeme top 3: Wood (primary), Iron (secondary + popular), Diamond (primary)
+    const topOrdered = [
+      topPlans.find((p) => p.name === "Wood")!,
+      topPlans.find((p) => p.name === "Iron")!,
+      topPlans.find((p) => p.name === "Diamond")!,
+    ].filter(Boolean)
+
+    return (
+      <div className="max-w-6xl mx-auto space-y-8">
+        {/* TOP 3 */}
+        <div className="grid md:grid-cols-3 gap-6">
+          <PlanCard plan={topOrdered[0]} variant="primary" />
+          <PlanCard plan={topOrdered[1]} variant="secondary" popular />
+          <PlanCard plan={topOrdered[2]} variant="primary" />
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {plans.map((p) => {
-              const isFeatured = !!p.featured
-              return (
-                <Card
+        {/* DROPDOWN / accordion */}
+        <details className="group">
+          <summary className="list-none cursor-pointer select-none">
+            <div className="flex items-center justify-center">
+              <div className="inline-flex items-center gap-3 rounded-2xl border border-border/60 bg-card/60 backdrop-blur px-5 py-3 shadow-[0_16px_40px_rgba(0,0,0,0.4)] transition-all duration-200 group-open:border-secondary/60 group-open:shadow-[0_22px_60px_rgba(0,0,0,0.55)]">
+                <span className="text-sm font-semibold text-muted-foreground group-open:text-foreground transition-colors">
+                  Zobrazit všechny plány
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  ({otherPlans.length} dalších)
+                </span>
+                <span className="ml-1 text-muted-foreground transition-transform duration-200 group-open:rotate-180">⌄</span>
+              </div>
+            </div>
+          </summary>
+
+          <div className="mt-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {otherPlans.map((p) => (
+                <PlanCard
                   key={p.name}
-                  className={[
-                    "group relative rounded-3xl bg-card/90 border border-border/60",
-                    "shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-all duration-300 cursor-pointer",
-                    "hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]",
-                    isFeatured
-                      ? "bg-card/95 border-2 border-secondary shadow-[0_30px_80px_rgba(0,0,0,0.9)] scale-[1.01] lg:scale-105 lg:-translate-y-2 hover:-translate-y-3 hover:shadow-[0_36px_90px_rgba(0,0,0,1)]"
-                      : "",
-                  ].join(" ")}
-                >
-                  {isFeatured && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <Badge className="bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-semibold">
-                        <Crown className="h-3 w-3" />
-                        Nejpopulárnější
-                      </Badge>
-                    </div>
-                  )}
+                  plan={p}
+                  variant="primary"
+                />
+              ))}
+            </div>
 
-                  <CardContent className={["p-8 space-y-6 h-full flex flex-col", isFeatured ? "pt-10" : ""].join(" ")}>
-                    <div>
-                      <Badge
-                        className={
-                          isFeatured
-                            ? "bg-secondary/20 text-secondary border-secondary/30 mb-4"
-                            : "bg-primary/20 text-primary border-primary/30 mb-4"
-                        }
-                      >
-                        Minecraft {p.name}
-                      </Badge>
-
-                      <div className="space-y-2">
-                        <h3 className="text-3xl font-bold text-card-foreground">{p.ramGb}GB RAM</h3>
-                        <div className="flex items-baseline gap-2">
-                          <span className={["text-4xl font-bold", isFeatured ? "text-secondary" : "text-primary"].join(" ")}>
-                            {p.priceCzk} Kč
-                          </span>
-                          <span className="text-muted-foreground text-sm">/měsíc</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3 py-4 border-t border-border flex-1">
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className={["h-1.5 w-1.5 rounded-full", isFeatured ? "bg-secondary" : "bg-primary"].join(" ")} />
-                        <span className="text-muted-foreground">{p.vcpu} vCPU</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className={["h-1.5 w-1.5 rounded-full", isFeatured ? "bg-secondary" : "bg-primary"].join(" ")} />
-                        <span className="text-muted-foreground">{p.ssdGb}GB NVMe SSD</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className={["h-1.5 w-1.5 rounded-full", isFeatured ? "bg-secondary" : "bg-primary"].join(" ")} />
-                        <span className="text-muted-foreground">Neomezené databáze a sloty</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className={["h-1.5 w-1.5 rounded-full", isFeatured ? "bg-secondary" : "bg-primary"].join(" ")} />
-                        <span className="text-muted-foreground">{p.backups}x Záloha</span>
-                      </div>
-                    </div>
-
-                    <Button
-                      className={[
-                        "w-full transition-all duration-200 cursor-pointer rounded-2xl h-11 font-semibold mt-auto",
-                        isFeatured
-                          ? "bg-secondary text-secondary-foreground hover:bg-secondary/90"
-                          : "bg-primary text-primary-foreground hover:bg-primary/90",
-                      ].join(" ")}
-                    >
-                      Začít
-                    </Button>
-                  </CardContent>
-                </Card>
-              )
-            })}
+            <div className="pt-6 flex justify-center">
+              <span className="text-xs text-muted-foreground">
+                Tip: Iron zůstává „Nejpopulárnější“ a top 3 jsou zobrazené nahoře.
+              </span>
+            </div>
           </div>
-        </div>
-      </section>
+        </details>
+      </div>
+    )
+  })()}
+</section>
+
 
       {/* Why Us Section */}
       <section id="why-us-section" className="container mx-auto px-4 py-20">
