@@ -654,7 +654,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 blur-3xl rounded-3xl" />
             <div className="relative rounded-2xl overflow-hidden border-2 border-border shadow-2xl">
               <img
-                src="/modern-gaming-server-room-data-center-colorful-led.jpg"
+                src="/dc.jpg"
                 alt="Infrastruktura herního serveru"
                 className="w-full h-full object-cover"
               />
