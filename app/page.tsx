@@ -175,36 +175,31 @@ export default function Home() {
                 </Button>
               </div>
 
-              {/* Stats */}
-             <div className="flex items-center mt-6">
-              <div className="flex items-center">
-                {[
-                  "/avatars/1mc.png",
-                  "/avatars/2mc.png",
-                  "/avatars/3mc.png",
-                  "/avatars/4mc.png",
-                ].map((src, i) => (
-                  <img
-                    key={src}
-                    src={src}
-                    alt={`Hráč ${i + 1}`}
-                    className={`
-                      w-11 h-11 rounded-full object-cover
-                      border-2 border-background
-                      shadow-sm
-                      ${i !== 0 ? "-ml-3" : ""}
-                    `}
-                    style={{ zIndex: 10 - i }}
-                  />
-                ))}
+                            {/* Stats */}
+              <div className="flex items-center gap-6 pt-4 justify-center lg:justify-start">
+                <div className="flex -space-x-3">
+                  {[
+                    "/avatars/1mc.png",
+                    "/avatars/2mc.png",
+                    "/avatars/3mc.png",
+                    "/avatars/4mc.png",
+                  ].map((src, i) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt={`Hráč ${i + 1}`}
+                      className="w-12 h-12 rounded-full border-2 border-background shadow-sm object-contain bg-background"
+                      style={{ zIndex: 10 - i }}
+                    />
+                  ))}
+                </div>
+
+                <div>
+                  <div className="text-lg font-bold text-foreground">1 000+ hráčů</div>
+                  <div className="text-sm text-muted-foreground">věří Hexado.pro</div>
+                </div>
               </div>
-             </section>  
-            
-              <div className="ml-6">
-                <div className="text-lg font-bold text-foreground">1 000+ hráčů</div>
-                <div className="text-sm text-muted-foreground">věří Hexado.pro</div>
-              </div>
-            </div>
+
 
 
             {/* Right Image */}
