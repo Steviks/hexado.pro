@@ -177,7 +177,7 @@ export default function Home() {
 
               {/* Stats */}
               <div className="flex items-center gap-4 pt-4 justify-center lg:justify-start">
-                <div className="flex -space-x-2">
+                <div className="flex items-center -space-x-1">
                   {[
                     "/avatars/1mc.png",
                     "/avatars/2mc.png",
@@ -188,11 +188,12 @@ export default function Home() {
                       key={src}
                       src={src}
                       alt={`Hráč ${i + 1}`}
-                      className="w-10 h-10 rounded-full border-2 border-background object-cover shadow-sm"
-                      loading="lazy"
+                      className="w-10 h-10 rounded-full border-2 border-background object-cover shadow-sm bg-background"
+                      style={{ zIndex: 10 - i }}
                     />
                   ))}
                 </div>
+
                 <div>
                   <div className="text-lg font-bold text-foreground">1 000+ hráčů</div>
                   <div className="text-sm text-muted-foreground">věří Hexado.pro</div>
