@@ -218,7 +218,7 @@ export default function Home() {
             <div className="relative flex-1">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/minecraft-gaming-server-colorful-kids-playing.jpg"
+                  src="/mc.png"
                   alt="Hosting herního serveru"
                   className="w-full h-auto"
                 />
