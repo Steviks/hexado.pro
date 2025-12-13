@@ -198,6 +198,7 @@ export default function Home() {
                   />
                 ))}
               </div>
+             </section>  
             
               <div className="ml-6">
                 <div className="text-lg font-bold text-foreground">1 000+ hráčů</div>
