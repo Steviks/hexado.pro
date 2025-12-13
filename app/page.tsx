@@ -5,6 +5,8 @@ import { Menu, X, Trophy, Zap, Shield, Rocket, Activity, Crown, Server, Car } fr
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Menu, X, Trophy, Zap, Shield, Rocket, Activity, Crown, Server, Car, ChevronDown } from "lucide-react"
+
 
 type Plan = {
   name: string
@@ -530,7 +532,9 @@ export default function Home() {
                 <span className="text-xs text-muted-foreground">
                   ({otherPlans.length} dalších)
                 </span>
-                <span className="ml-1 text-muted-foreground transition-transform duration-200 group-open:rotate-180">⌄</span>
+                <span className="ml-1 inline-flex items-center justify-center">
+                  <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform duration-200 ease-out group-open:rotate-180" />
+                </span>
               </div>
             </div>
           </summary>
