@@ -592,7 +592,18 @@ export default function Home() {
             </div>
 
             <div className="space-y-4">
-              <Card className="bg-transparent border border-border/50 hover:border-primary/50 transition-all duration-200 group cursor-pointer">
+              <Card
+                  className="
+                    bg-card/40
+                    border border-border/40
+                    transition-all duration-300
+                    cursor-pointer
+                    hover:-translate-y-1
+                    hover:bg-card/60
+                    hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+                  "
+                >
+
                 <CardContent className="p-5 flex items-start gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 text-lg">
                     <Activity className="h-5 w-5 text-primary" />
@@ -605,8 +616,17 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-
-              <Card className="bg-transparent border border-border/50 hover:border-secondary/50 transition-all duration-200 group cursor-pointer">
+              <Card
+                  className="
+                    bg-card/40
+                    border border-border/40
+                    transition-all duration-300
+                    cursor-pointer
+                    hover:-translate-y-1
+                    hover:bg-card/60
+                    hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+                  "
+                >
                 <CardContent className="p-5 flex items-start gap-4">
                   <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 text-lg">
                     <Shield className="h-5 w-5 text-secondary" />
@@ -620,7 +640,17 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-transparent border border-border/50 hover:border-primary/50 transition-all duration-200 group cursor-pointer">
+              <Card
+                  className="
+                    bg-card/40
+                    border border-border/40
+                    transition-all duration-300
+                    cursor-pointer
+                    hover:-translate-y-1
+                    hover:bg-card/60
+                    hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+                  "
+                >
                 <CardContent className="p-5 flex items-start gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 text-lg">
                     <Zap className="h-5 w-5 text-primary" />
@@ -634,7 +664,17 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-transparent border border-border/50 hover:border-secondary/50 transition-all duration-200 group cursor-pointer">
+              <Card
+                  className="
+                    bg-card/40
+                    border border-border/40
+                    transition-all duration-300
+                    cursor-pointer
+                    hover:-translate-y-1
+                    hover:bg-card/60
+                    hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+                  "
+                >
                 <CardContent className="p-5 flex items-start gap-4">
                   <div className="h-10 w-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 text-lg">
                     <Rocket className="h-5 w-5 text-secondary" />
@@ -680,7 +720,17 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          <Card className="bg-transparent border border-border/50 hover:border-primary/50 transition-all duration-200 group cursor-pointer">
+              <Card
+                  className="
+                    bg-card/40
+                    border border-border/40
+                    transition-all duration-300
+                    cursor-pointer
+                    hover:-translate-y-1
+                    hover:bg-card/60
+                    hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+                  "
+                >
             <CardContent className="p-6 space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">🎮</span>
@@ -694,7 +744,17 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-transparent border border-border/50 hover:border-secondary/50 transition-all duration-200 group cursor-pointer">
+              <Card
+                  className="
+                    bg-card/40
+                    border border-border/40
+                    transition-all duration-300
+                    cursor-pointer
+                    hover:-translate-y-1
+                    hover:bg-card/60
+                    hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+                  "
+                >
             <CardContent className="p-6 space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">💳</span>
@@ -707,8 +767,17 @@ export default function Home() {
               </div>
             </CardContent>
           </Card>
-
-          <Card className="bg-transparent border border-border/50 hover:border-primary/50 transition-all duration-200 group cursor-pointer">
+              <Card
+                  className="
+                    bg-card/40
+                    border border-border/40
+                    transition-all duration-300
+                    cursor-pointer
+                    hover:-translate-y-1
+                    hover:bg-card/60
+                    hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+                  "
+                >
             <CardContent className="p-6 space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">📞</span>
@@ -722,7 +791,17 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-transparent border border-border/50 hover:border-secondary/50 transition-all duration-200 group cursor-pointer">
+              <Card
+                  className="
+                    bg-card/40
+                    border border-border/40
+                    transition-all duration-300
+                    cursor-pointer
+                    hover:-translate-y-1
+                    hover:bg-card/60
+                    hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+                  "
+                >
             <CardContent className="p-6 space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">🚀</span>
