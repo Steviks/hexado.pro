@@ -1,10 +1,20 @@
 "use client"
 
-import { useState } from "react"
-import { Menu, X, Trophy, Zap, Shield, Star, Rocket, Activity, Crown, Server, Car } from "lucide-react"
+import { useMemo, useState } from "react"
+import { Menu, X, Trophy, Zap, Shield, Rocket, Activity, Crown, Server, Car } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+
+type Plan = {
+  name: string
+  ramGb: number
+  priceCzk: number
+  ssdGb: number
+  vcpu: number
+  backups: number
+  featured?: boolean
+}
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -17,6 +27,22 @@ export default function Home() {
       setMobileMenuOpen(false)
     }
   }
+
+  const plans = useMemo<Plan[]>(
+    () => [
+      { name: "Dirt", ramGb: 1, priceCzk: 30, ssdGb: 15, vcpu: 1, backups: 10 },
+      { name: "Grass", ramGb: 2, priceCzk: 60, ssdGb: 30, vcpu: 2, backups: 10 },
+      { name: "Wood", ramGb: 3, priceCzk: 90, ssdGb: 45, vcpu: 3, backups: 10 },
+      { name: "Stone", ramGb: 4, priceCzk: 120, ssdGb: 60, vcpu: 4, backups: 15 },
+      { name: "Coal", ramGb: 6, priceCzk: 180, ssdGb: 90, vcpu: 4, backups: 15 },
+      { name: "Iron", ramGb: 8, priceCzk: 240, ssdGb: 120, vcpu: 5, backups: 15, featured: true },
+      { name: "Gold", ramGb: 12, priceCzk: 360, ssdGb: 180, vcpu: 6, backups: 15 },
+      { name: "Diamond", ramGb: 16, priceCzk: 480, ssdGb: 240, vcpu: 8, backups: 20 },
+      { name: "Netherite", ramGb: 24, priceCzk: 720, ssdGb: 360, vcpu: 10, backups: 20 },
+      { name: "Bedrock", ramGb: 32, priceCzk: 960, ssdGb: 480, vcpu: 12, backups: 20 },
+    ],
+    []
+  )
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -43,12 +69,12 @@ export default function Home() {
                 >
                   O nás
                 </a>
-                  <a
-                    href="../kontakt"
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
-                  >
-                    Kontakt
-                  </a>
+                <a
+                  href="../kontakt"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
+                >
+                  Kontakt
+                </a>
               </nav>
 
               <div className="hidden md:flex items-center">
@@ -86,7 +112,7 @@ export default function Home() {
                 >
                   O nás
                 </a>
-                  <a
+                <a
                   href="../kontakt"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer block"
                   onClick={() => setMobileMenuOpen(false)}
@@ -109,7 +135,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-  <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 animate-fade-in-up">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 animate-fade-in-up">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 h-96 w-96 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 h-96 w-96 bg-secondary/10 rounded-full blur-3xl" />
@@ -185,10 +211,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section
-        id="services-section"
-        className="relative py-24 px-4 overflow-hidden"
-      >
+      <section id="services-section" className="relative py-24 px-4 overflow-hidden">
         {/* background glow */}
         <div className="absolute inset-0 -z-10 opacity-40">
           <div className="absolute -top-20 -left-10 h-72 w-72 rounded-full bg-primary/40 blur-3xl" />
@@ -208,8 +231,8 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Nejpopulárnější herní platformy na jednom místě – stabilní servery,
-              rychlé nasazení a podpora, která odpovídá během pár minut.
+              Nejpopulárnější herní platformy na jednom místě – stabilní servery, rychlé nasazení a podpora, která
+              odpovídá během pár minut.
             </p>
           </div>
 
@@ -221,9 +244,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-semibold">FiveM</h3>
-                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">
-                      GTA V Roleplay servery
-                    </p>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">GTA V Roleplay servery</p>
                   </div>
                   <div className="h-10 w-10 rounded-2xl bg-primary/10 flex items-center justify-center">
                     <Car className="h-5 w-5 text-primary" />
@@ -231,8 +252,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mb-5">
-                  Ideální pro RP komunity, economy servery i akční frakční servery.
-                  Plná podpora custom skriptů a pluginů.
+                  Ideální pro RP komunity, economy servery i akční frakční servery. Plná podpora custom skriptů a pluginů.
                 </p>
 
                 <ul className="space-y-3 text-sm text-muted-foreground flex-1">
@@ -281,8 +301,8 @@ export default function Home() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mb-5">
-                  Od malého survival serveru s kamarády po velkou veřejnou
-                  síť. Podpora Paper, Purpur, Forge i dalších platforem.
+                  Od malého survival serveru s kamarády po velkou veřejnou síť. Podpora Paper, Purpur, Forge i dalších
+                  platforem.
                 </p>
 
                 <ul className="space-y-3 text-sm text-muted-foreground flex-1">
@@ -314,9 +334,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-semibold">Discord boti</h3>
-                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">
-                      Hosting pro komunity
-                    </p>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">Hosting pro komunity</p>
                   </div>
                   <div className="h-10 w-10 rounded-2xl bg-purple-500/15 flex items-center justify-center">
                     <Trophy className="h-5 w-5 text-purple-400" />
@@ -324,8 +342,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mb-5">
-                  Spolehlivý hosting pro moderaci, hudební i custom utility
-                  boty. Ideální pro herní servery i velké komunity.
+                  Spolehlivý hosting pro moderaci, hudební i custom utility boty. Ideální pro herní servery i velké komunity.
                 </p>
 
                 <ul className="space-y-3 text-sm text-muted-foreground flex-1">
@@ -354,7 +371,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Pricing Section */}
       <section id="pricing" className="container mx-auto px-4 py-16">
         <div className="text-center mb-16 animate-fade-in">
@@ -367,134 +383,90 @@ export default function Home() {
           </p>
         </div>
 
-        {/* The pricing table was not updated, so it remains the same */}
-<div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-  {/* LEFT */}
-  <Card className="group relative rounded-3xl bg-card/90 border border-border/60 shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
-    <CardContent className="p-8 space-y-6 h-full flex flex-col">
-      <div>
-        <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Wood</Badge>
-        <div className="space-y-2">
-          <h3 className="text-3xl font-bold text-card-foreground">3GB RAM</h3>
-          <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold text-primary">90 Kč</span>
-            <span className="text-muted-foreground text-sm">/měsíc</span>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {plans.map((p) => {
+              const isFeatured = !!p.featured
+              return (
+                <Card
+                  key={p.name}
+                  className={[
+                    "group relative rounded-3xl bg-card/90 border border-border/60",
+                    "shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-all duration-300 cursor-pointer",
+                    "hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]",
+                    isFeatured
+                      ? "bg-card/95 border-2 border-secondary shadow-[0_30px_80px_rgba(0,0,0,0.9)] scale-[1.01] lg:scale-105 lg:-translate-y-2 hover:-translate-y-3 hover:shadow-[0_36px_90px_rgba(0,0,0,1)]"
+                      : "",
+                  ].join(" ")}
+                >
+                  {isFeatured && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                      <Badge className="bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-semibold">
+                        <Crown className="h-3 w-3" />
+                        Nejpopulárnější
+                      </Badge>
+                    </div>
+                  )}
+
+                  <CardContent className={["p-8 space-y-6 h-full flex flex-col", isFeatured ? "pt-10" : ""].join(" ")}>
+                    <div>
+                      <Badge
+                        className={
+                          isFeatured
+                            ? "bg-secondary/20 text-secondary border-secondary/30 mb-4"
+                            : "bg-primary/20 text-primary border-primary/30 mb-4"
+                        }
+                      >
+                        Minecraft {p.name}
+                      </Badge>
+
+                      <div className="space-y-2">
+                        <h3 className="text-3xl font-bold text-card-foreground">{p.ramGb}GB RAM</h3>
+                        <div className="flex items-baseline gap-2">
+                          <span className={["text-4xl font-bold", isFeatured ? "text-secondary" : "text-primary"].join(" ")}>
+                            {p.priceCzk} Kč
+                          </span>
+                          <span className="text-muted-foreground text-sm">/měsíc</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3 py-4 border-t border-border flex-1">
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className={["h-1.5 w-1.5 rounded-full", isFeatured ? "bg-secondary" : "bg-primary"].join(" ")} />
+                        <span className="text-muted-foreground">{p.vcpu} vCPU</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className={["h-1.5 w-1.5 rounded-full", isFeatured ? "bg-secondary" : "bg-primary"].join(" ")} />
+                        <span className="text-muted-foreground">{p.ssdGb}GB NVMe SSD</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className={["h-1.5 w-1.5 rounded-full", isFeatured ? "bg-secondary" : "bg-primary"].join(" ")} />
+                        <span className="text-muted-foreground">Neomezené databáze a sloty</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className={["h-1.5 w-1.5 rounded-full", isFeatured ? "bg-secondary" : "bg-primary"].join(" ")} />
+                        <span className="text-muted-foreground">{p.backups}x Záloha</span>
+                      </div>
+                    </div>
+
+                    <Button
+                      className={[
+                        "w-full transition-all duration-200 cursor-pointer rounded-2xl h-11 font-semibold mt-auto",
+                        isFeatured
+                          ? "bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                          : "bg-primary text-primary-foreground hover:bg-primary/90",
+                      ].join(" ")}
+                    >
+                      Začít
+                    </Button>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
-      </div>
-
-      <div className="space-y-3 py-4 border-t border-border flex-1">
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">3 vCPU</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">60GB NVMe SSD</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">Neomezené databáze a sloty</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">10x Záloha</span>
-        </div>
-      </div>
-
-      <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 cursor-pointer rounded-2xl h-11 font-semibold mt-auto">
-        Začít
-      </Button>
-    </CardContent>
-  </Card>
-
-  {/* MIDDLE (featured) */}
-  <Card className="group relative rounded-3xl bg-card/95 border-2 border-secondary shadow-[0_30px_80px_rgba(0,0,0,0.9)] scale-[1.02] md:scale-105 md:-translate-y-2 transition-all duration-300 cursor-pointer hover:-translate-y-3 hover:shadow-[0_36px_90px_rgba(0,0,0,1)]">
-    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-      <Badge className="bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-semibold">
-        <Crown className="h-3 w-3" />
-        Nejpopulárnější
-      </Badge>
-    </div>
-
-    <CardContent className="p-8 space-y-6 pt-10 h-full flex flex-col">
-      <div>
-        <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-4">Minecraft Iron</Badge>
-        <div className="space-y-2">
-          <h3 className="text-3xl font-bold text-card-foreground">8GB RAM</h3>
-          <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold text-secondary">240 Kč</span>
-            <span className="text-muted-foreground text-sm">/měsíc</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="space-y-3 py-4 border-t border-border flex-1">
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">5 vCPU</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">120GB NVMe SSD</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">Neomezené databáze a sloty</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          <span className="text-muted-foreground">15x Záloha</span>
-        </div>
-      </div>
-
-      <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-all duration-200 cursor-pointer rounded-2xl h-11 font-semibold mt-auto">
-        Začít
-      </Button>
-    </CardContent>
-  </Card>
-
-  {/* RIGHT */}
-  <Card className="group relative rounded-3xl bg-card/90 border border-border/60 shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
-    <CardContent className="p-8 space-y-6 h-full flex flex-col">
-      <div>
-        <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">Minecraft Diamond</Badge>
-        <div className="space-y-2">
-          <h3 className="text-3xl font-bold text-card-foreground">16GB RAM</h3>
-          <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold text-primary">480 Kč</span>
-            <span className="text-muted-foreground text-sm">/měsíc</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="space-y-3 py-4 border-t border-border flex-1">
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">8 vCPU</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">120GB NVMe SSD</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">Neomezené databáze a sloty</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm">
-          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="text-muted-foreground">20x Záloha</span>
-        </div>
-      </div>
-
-      <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 cursor-pointer rounded-2xl h-11 font-semibold mt-auto">
-        Začít
-      </Button>
-    </CardContent>
-  </Card>
-</div>
       </section>
-
 
       {/* Why Us Section */}
       <section id="why-us-section" className="container mx-auto px-4 py-20">
@@ -679,7 +651,11 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://panel.hexado.pro" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
+                  <a
+                    href="https://panel.hexado.pro"
+                    className="hover:text-primary transition duration-200 cursor-pointer"
+                    target="_blank"
+                  >
                     Server Administrace
                   </a>
                 </li>
@@ -704,12 +680,20 @@ export default function Home() {
               <h4 className="font-bold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="https://cdn.hexado.pro/legal/vop.pdf" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
+                  <a
+                    href="https://cdn.hexado.pro/legal/vop.pdf"
+                    className="hover:text-primary transition duration-200 cursor-pointer"
+                    target="_blank"
+                  >
                     Všeobecné obchodní podmínky
                   </a>
                 </li>
                 <li>
-                  <a href="http://cdn.hexado.pro/legal/gdpr.pdf" className="hover:text-primary transition duration-200 cursor-pointer" target="_blank">
+                  <a
+                    href="http://cdn.hexado.pro/legal/gdpr.pdf"
+                    className="hover:text-primary transition duration-200 cursor-pointer"
+                    target="_blank"
+                  >
                     Zásady ochrany osobních údajů
                   </a>
                 </li>
