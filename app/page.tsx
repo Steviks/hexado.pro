@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
+            {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 animate-fade-in-up">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 h-96 w-96 bg-primary/10 rounded-full blur-3xl" />
@@ -143,6 +143,7 @@ export default function Home() {
 
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* LEFT */}
             <div className="space-y-8 text-center lg:text-left">
               <div>
                 <Badge className="bg-primary/20 text-primary border-primary/30 mb-6 text-base px-6 py-2">
@@ -175,22 +176,21 @@ export default function Home() {
                 </Button>
               </div>
 
-                            {/* Stats */}
+              {/* Stats */}
               <div className="flex items-center gap-6 pt-4 justify-center lg:justify-start">
                 <div className="flex -space-x-3">
-                  {[
-                    "/avatars/1mc.png",
-                    "/avatars/2mc.png",
-                    "/avatars/3mc.png",
-                    "/avatars/4mc.png",
-                  ].map((src, i) => (
-                    <img
+                  {["/avatars/1mc.png", "/avatars/2mc.png", "/avatars/3mc.png", "/avatars/4mc.png"].map((src, i) => (
+                    <div
                       key={src}
-                      src={src}
-                      alt={`Hráč ${i + 1}`}
-                      className="w-12 h-12 rounded-full border-2 border-background shadow-sm object-contain bg-background"
+                      className="w-12 h-12 rounded-full border-2 border-background shadow-sm bg-background overflow-hidden"
                       style={{ zIndex: 10 - i }}
-                    />
+                    >
+                      <img
+                        src={src}
+                        alt={`Hráč ${i + 1}`}
+                        className="w-full h-full object-contain scale-125"
+                      />
+                    </div>
                   ))}
                 </div>
 
@@ -199,10 +199,9 @@ export default function Home() {
                   <div className="text-sm text-muted-foreground">věří Hexado.pro</div>
                 </div>
               </div>
+            </div>
 
-
-
-            {/* Right Image */}
+            {/* RIGHT */}
             <div className="relative flex-1">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
@@ -221,6 +220,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Services Section */}
       <section id="services-section" className="relative py-24 px-4 overflow-hidden">
