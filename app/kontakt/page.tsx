@@ -116,10 +116,14 @@ export default function ContactPage() {
                     className="mt-1 w-full rounded-xl bg-background border border-border px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
-
-                <Button className="w-full bg-primary text-primary-foreground font-semibold rounded-xl h-11 hover:bg-primary/90">
+                
+                <Button
+                  type="submit"
+                  className="w-full bg-primary text-primary-foreground font-semibold rounded-xl h-11 hover:bg-primary/90"
+                >
                   Odeslat zprávu
                 </Button>
+
 
                 <p className="text-xs text-muted-foreground pt-2">
                   Zprávy z formuláře jsou odesílány na{" "}
@@ -133,5 +137,6 @@ export default function ContactPage() {
     </div>
   )
 }
+
 
 
