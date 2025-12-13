@@ -176,30 +176,35 @@ export default function Home() {
               </div>
 
               {/* Stats */}
-              <div className="flex items-center gap-4 pt-4 justify-center lg:justify-start">
-                <div className="flex items-center -space-x-1">
-                  {[
-                    "/avatars/1mc.png",
-                    "/avatars/2mc.png",
-                    "/avatars/3mc.png",
-                    "/avatars/4mc.png",
-                  ].map((src, i) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt={`Hráč ${i + 1}`}
-                      className="w-10 h-10 rounded-full border-2 border-background object-cover shadow-sm bg-background"
-                      style={{ zIndex: 10 - i }}
-                    />
-                  ))}
-                </div>
-
-                <div>
-                  <div className="text-lg font-bold text-foreground">1 000+ hráčů</div>
-                  <div className="text-sm text-muted-foreground">věří Hexado.pro</div>
-                </div>
+             <div className="flex items-center mt-6">
+              <div className="flex items-center">
+                {[
+                  "/avatars/1mc.png",
+                  "/avatars/2mc.png",
+                  "/avatars/3mc.png",
+                  "/avatars/4mc.png",
+                ].map((src, i) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt={`Hráč ${i + 1}`}
+                    className={`
+                      w-11 h-11 rounded-full object-cover
+                      border-2 border-background
+                      shadow-sm
+                      ${i !== 0 ? "-ml-3" : ""}
+                    `}
+                    style={{ zIndex: 10 - i }}
+                  />
+                ))}
+              </div>
+            
+              <div className="ml-6">
+                <div className="text-lg font-bold text-foreground">1 000+ hráčů</div>
+                <div className="text-sm text-muted-foreground">věří Hexado.pro</div>
               </div>
             </div>
+
 
             {/* Right Image */}
             <div className="relative flex-1">
