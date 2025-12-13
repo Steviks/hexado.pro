@@ -178,10 +178,20 @@ export default function Home() {
               {/* Stats */}
               <div className="flex items-center gap-4 pt-4 justify-center lg:justify-start">
                 <div className="flex -space-x-2">
-                  <div className="w-10 h-10 rounded-full bg-primary border-2 border-background" />
-                  <div className="w-10 h-10 rounded-full bg-secondary border-2 border-background" />
-                  <div className="w-10 h-10 rounded-full bg-orange-500 border-2 border-background" />
-                  <div className="w-10 h-10 rounded-full bg-cyan-500 border-2 border-background" />
+                  {[
+                    "/avatars/1mc.png",
+                    "/avatars/2mc.png",
+                    "/avatars/3mc.png",
+                    "/avatars/4mc.png",
+                  ].map((src, i) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt={`Hráč ${i + 1}`}
+                      className="w-10 h-10 rounded-full border-2 border-background object-cover shadow-sm"
+                      loading="lazy"
+                    />
+                  ))}
                 </div>
                 <div>
                   <div className="text-lg font-bold text-foreground">1 000+ hráčů</div>
