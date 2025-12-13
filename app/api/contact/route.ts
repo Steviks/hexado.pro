@@ -25,7 +25,7 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Hexado Kontakt <onboarding@resend.dev>", // free plan OK
-      to: ["support@hexado.pro"],
+      to: ["nejstevereal@gmail.com"],
       replyTo: String(email),
       subject: `📩 Nová zpráva – ${String(name)}`,
       html: `
@@ -50,3 +50,4 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Nepodařilo se odeslat zprávu" }, { status: 500 })
   }
 }
+
